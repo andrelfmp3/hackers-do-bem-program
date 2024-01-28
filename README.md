@@ -1,7 +1,7 @@
 # hackers-do-bem
  
-Notas pessoais para estudo do programa "Hackers do Bem", utilizadas como guia de referência.
+Personal study notes for the "Hackers do Bem" (Hackers for Good) program, used as a reference guide.
 
-"A Rede Nacional de Ensino e Pesquisa (RNP), o SENAI-SP e a Softex, com apoio do Ministério da Ciência, Tecnologia e Inovações, com recursos da Lei no 8.248, de 23 de outubro de 1991, criaram um curso gratuito em cibersegurança, do básico ao avançado, para quem quer começar a atuar nesse campo." 
+The "Hackers for Good" program is a Brazilian collaborative initiative by the National Education and Research Network (RNP), SENAI-SP, and Softex, with the support of the Ministry of Science, Technology, and Innovations. This project, funded by Law No. 8,248, dated October 23, 1991, aims to offer a comprehensive and free cybersecurity course, covering basic to advanced concepts. It is an excellent opportunity for those looking to embark on a journey in the field of cybersecurity.
 
 https://conteudo.hackersdobem.org.br/
