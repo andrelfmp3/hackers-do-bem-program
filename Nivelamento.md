@@ -1,4 +1,4 @@
-# Introdução à Segurança da Informação
+#Mód 1: Introdução à Segurança da Informação
 
 Níveis de Proteção: particular, corporativo e governamental. 
 Dados: classificados como online (@) e offline (nome completo), são elementos cruciais na identificação de usuários. Prioridades de proteção, via de regra.
@@ -31,7 +31,7 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
 - Trojan: Malware que se disfarça como algo legítimo para enganar o usuário.
 - Botnets: Redes de computadores contaminados controlados remotamente para atividades maliciosas.
 
-# Identificar Componentes de Hardware de Computador
+#Mód 2: Identificar Componentes de Hardware de Computador
 
 **Grandezas Computacionais:** diferentes sistemas numéricos.
 
@@ -146,7 +146,7 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
 
 - Container: visa virtualizar o S.O (diferente de virtualizar hardware, onde separa-se aplicativos) 
 
-# Internet e camadas de acesso a rede
+#Mód 3: Internet e camadas de acesso a rede
 
 ## História da internet
 
@@ -202,4 +202,4 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
 - 20 milhões de lares brasileiros, com melhor plano de velocidade, estabilidade, confiabilidade e qualidade, apenas com dificuldade de instalação. 
 - Conexão sem fio, feita via protocolos, radio ou satélite. Ondas de radio frequência com antenas recebe e moldem captura sinal para utilização. Necessário receptor de satélite
 
-## 
+
