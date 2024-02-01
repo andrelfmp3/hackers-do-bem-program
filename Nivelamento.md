@@ -196,7 +196,7 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
 
 **Internet a cabo**
 - Cabo coxial, sofre menos interferência e percorre longas distâncias, apesar da velocidade baixa (10Mbit/s)
-- PLC (power line communication) utiliza transmissão via cabo de energia. Um equipamente envia sinal via rede elétrica, e outro recebe. Equipamentos importados (HomePlug), logo, maior custo, apesar da rápida distribuição
+- PLC (power line communication) utiliza transmissão via cabo de energia. Um equipamente envia sinal via rede elétrica, e outro recebe. Equipamentos importados (HomePlug), logo, maior custo. Possui rápida distribuição, mas velocidade de conexão relativamente baixa
 
 **Fibra óptica**
 - 20 milhões de lares brasileiros, com melhor plano de velocidade, estabilidade, confiabilidade e qualidade, apenas com dificuldade de instalação. 
