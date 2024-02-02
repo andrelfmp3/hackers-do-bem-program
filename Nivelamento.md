@@ -202,4 +202,16 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
 - 20 milhões de lares brasileiros, com melhor plano de velocidade, estabilidade, confiabilidade e qualidade, apenas com dificuldade de instalação. 
 - Conexão sem fio, feita via protocolos, radio ou satélite. Ondas de radio frequência com antenas recebe e moldem captura sinal para utilização. Necessário receptor de satélite
 
+## LAN_WAN topologias
+- Quando se tem mais de um computador se comunicando, forma-se uma rede de computadores, que poder ter diferentes características, podendo ser LAN, MAN, WAN, SAN, PAN, WLAN, WMAN e WWAAN sendo as duas mais utilizadas a LAN (rede local) e a WAN (rede de área ampla)
+    - LAN: Local Area Network, compartilha recursos e controla acesso atraves da relação clientes/servidores. Em rede doméstica, via roteador conectado a um moldem; e em rede empresarial, via Switch
+        - Para construir uma rede LAN, é necessário levantar a quantidade de computadores; a quantidade de switch; a distância entre os computadores; a quantidade de notebooks; definir acesso sem fio; e ligar o switch em outros dispostivos (configuração dinâmica, via servidor de IP)
+    - **MAN:** Metropolitan Area Network, malha de comunicação que cobra uma grande área geográfica (entre 5km à 50km), podendo ser de uso empresarial ou não. A interligação é geralmente feita via fibra óptica, que pode ser alugada ou própria, o que garante uma grande largura de banda. Entretanto, possui maior dificuldade de instalação, operação, e manutenção.
+    - **CAN:** Campus Area Network, maior que a LAN mas menor que MAN, possui implementação mais barata, tendo como vantagem o gerenciamento centralizado
+    - **WAN:** Wide Area Network, rede de longa distância via internet, ligação é feia via VPN (Virtual Private Network, usada para simular uma mesma rede com acesso criptografado). Necessíta muitos equipamentos.
+    - SAN: Storage Area Network, visa armazenamento para grandes equipamentos, conectados geralmente via fibras, e é usado para melhorar disponibilidade e desempenho. Garante **flexibidade, disponibilidade e escalabilidade**
+    - PAN: Personal Area Network, visa uso pessoal descentralizado para curta distância (USB e FireWire; ou protocolos como Bluetooth, WiFi, Irda [Infrared Data Association] e Zigbee [Uso industrail])
+    - BAN: Body Area Network, dispositivos pequenos ou médios sem fio, podendo ser incorporados ou anexados no corpo, visando fins médicos, militares ou de segurança. Dificuldade de qualidade de dados, sensor, segurança e custo.
+
+
 
