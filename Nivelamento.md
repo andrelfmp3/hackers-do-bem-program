@@ -213,5 +213,47 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
     - PAN: Personal Area Network, visa uso pessoal descentralizado para curta distância (USB e FireWire; ou protocolos como Bluetooth, WiFi, Irda [Infrared Data Association] e Zigbee [Uso industrail])
     - BAN: Body Area Network, dispositivos pequenos ou médios sem fio, podendo ser incorporados ou anexados no corpo, visando fins médicos, militares ou de segurança. Dificuldade de qualidade de dados, sensor, segurança e custo.
 
+**Redes sem fio**
+- WLAN (Wirelless Local Area Network): Conexão em área límitada, uso residencial, criação simples (cabo de dados até moldem, moldem para roteador, distribui internet via ar utilizando protocolo 802.11). Melhoras em largura de banda, taxa de simultaniedade, baixa latência e baixo consumo.
+- WMAN (Wirelles Metropolitan Area Network): Acesso fora de rede doméstica, uso de APs (Acess Points), via cabo, AP convete
+- WPAN (Wireless Personal Area Network): Rede pessoal sem fio (bluetooth, viva-voz). Conecta-se a protocolos, zomo Zigbee. Associado a IOT
+- WWAN (Wireless Wide Area Network): Redes de tecnologias de celular, visa aplicações telefónicas. Tem como principa uso o acesso a internet (Via torres). 
+
+**Topologias de rede**
+- Formato como a rede é definida, diferentes tipos.
+    - Point to point (ponto a ponto): Rede com computadores interligados via meio. Ex: Cabo crossover. Compartilham informações entre eles
+    - Bus (Barramento): Rede antiga e mais barata, iniciada com cabo no inicio até o fim da rede, via cabo coxial e divisores de sinal. Caso um nó pare, todos parem (Rede continua)
+    - Ring (Anel): Computador com placas de rede se conectam a outros computadores. Imune a falhas ao nós parem de se comunicar (outra direção, a menos que dois ou mais nós sejam danificados). Rede mais cara, geralmente utilizada em fibra óptica
+    - Estrela (Star): Mais utilizado, rede central gerencia, falha em um nó prejudica apenas um dispositivo . Custo aceitável, mas se o nó central parar, toda rede para.
+    - Árvore (tree): Facilidade para adicionar novo dispositivo, possibilidade de erro no dispositivo de distribuição
+    - Mash (Malha): Ring + Star, todos dispostivios se comunicam. Quase imune a falhas, alta disponibilidade. Díficil aplicação e alto custo
+    - Hybrid (Híbrida): Combinação das anteriores
+
+**Intranet/extranet**
+    - Cada um com um sistema de segurança diferente;
+    - Internet: Visa navegar por conteúdos externos, devido rede global de computadores
+    - Intranet: Rede local privada, onde somente pessoas autorizadas podem acessar. Usada para compartilhar dados empresarialmente, via de regra. Acesso controlado via email, senha ou IP.
+    - Extranet: Rede privada interna que pode ser acessada de forma remota, pode ser usada para segurança de rede. Entre a internet e a extranet.
+        MFA = Multiplo fator de autentificação, visa segurança na Extranet, para o acesso remoto. 
+**Ativos de rede**
+- Ativos: Equipamentos responsáveis por converter sinais elétricos e ópticos em dados. Gerenciam tráfego (Hubs, Switches, Roteadores, Placas deRede, Firewall, etc)
+    - **Hub:** Interliga equipamentos, faz broadcast (ao enviar dado, todas máquinas recebem). Pode ser passivo ou ativo. Ativo regenera e repete o sinal (+100m), enquanto pássivo não. Muitos hubs levam a colisão de pacotes. prejudicando a rede.
+    - **Switches:** Um dos principais componentes, similar ao hub, trabalha com mais portas (24 ou 48 portas). Trabalha com MAC Adress. Modelos não gerencíaveis não possuem regras de acesso, enquanto gerencíaveis possuem funcionalidades mais avançadas, permitindo configurações de segmentação de refe (Divisão virtual de rede). Diferente do hub, switch gerencia quais informações devem ser enviados para máquinas específicos (Tabela MAC)
+    - **Roteadores:** Com ou sem fio, ncaminha dado em camadas diferentes, e conecta diferentes redes. Trabalha com IP e serve para encaminhar os dados entre redes. Possuem slots para expansão. Similar a Switch, mas *interliga mais de uma rede*.
+    - **Placa de rede**: Dispositivo que interliga equipamentos desktop aos demais equipamentos, pode ser fixa na motherboard ou via usb. Para conexão de rede, placa deve ter IP (Internet Protocol), podendo ele ser fíxo (colocado manualmente) ou dinámico (servidor de **DHCS**). Pode ser verificado via terminal através do PING (ICMP), se houver resposta, máquina está ativa. 
+        - Firewall: Hardware / Software que separa rede interna de rede externa, tendo como objetivo proteger as ameaças externas para proteger a interna.
+            - Filtragem de pacote: Trata  os pacotes de entrada e saída, onde examina e testa cada pacote (via regra definida pelos admins via protocolos, portas, e endereço de destino). Caso não atenda os requisitos, ele é descartado.
+                - Filtragem de pacote estático: Definição de regras fixas e manuais. Define-se portas, lista de acesso, e endereços de IPs. Pouco utilizado.
+                - Filtragem de pacote dinámico: Configurações via tempo de serviço aberto, após tempo, se fecha.
+                - Filtragem de pacote estável: Conexão via extensões modernas ativas, ao reconhecer entrada, identifica melhor tráfico convencional e malicioso.
+            - Firewall de aplicação: Desenvoldio para atacar diretamente aplicações específicas, geralmente WEB (Web Aplication File). Visa manter aplicação segura. Escalabilidade
+                - Firewall de aplicação de rede
+                - Firewall de aplicação host (baixo custo, alta complexidade, cada computador)
+                - Firewall de aplicação em nuvem: Gerenciado pelo provedor
+            - Inspeção de estado: Inspeciona dados, procurando padrões baseados nas regras.
+
+**Conectividade:**
+- 
+
 
 
