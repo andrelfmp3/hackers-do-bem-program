@@ -336,3 +336,24 @@ Em resumo, a fibra óptica monomodo é usada para transmissões de longa distân
         - Padrão 802.11 define características, sendo o primeiro padrão lançado. Possue outras versões, como a 802.11a; 802.11b; 802.11g; 802.11n e 802.11ac.
     - Bluetooth: Conectividade de curto alcance para dispostivios pessoaais. Utiliza sinais de rádio de curto alcance (2,4Ghz). Podem operar em diferentes canais de comunicação e possui curto alcance (100m, para versão 5.0 em condições ideias)
     - 3g, 4g e 5g: Dispositivos moveis com alta velocidade de conexão, cada uma com características técnicas diferentes.
+
+# Acesso a rede e camada de internet (IP)
+
+**Camada de acesso**
+- Processo da comunicação tem 5 elementos: emissor, receptor, mensagem, canal, e código. Conceito é valido para comunicação entre dispostivos de redes, onde o protocolo é o processo padrão (ex: tcp/ip).
+    - Aplicações: mesmo em dispostivos diferentes, a aplicação não deve-se alterar (funciona em diferentes dispositivos)
+    - Transporte: tcp e udp, por exemplo, tem diferentes formas de trabalhar.
+    - Internet: Conectividade, com protocolos de rede.
+    - Acesso à rede: Permite comunicação eficaz.
+
+- Modelo TCP/IP e modelo OSI (camada 1 e 2)
+    - Modelo OSI possui interação entre camadas.
+
+- Os padrões da canada de acesso são diferentes no Modelo OSI e no Modelo TCP/IP. Esses padrões são determinados por algumas entidades e organizações, que se baseiam se os modelos são físicos ou não. Possuem padrões de camada de acesso a rede padronizados.
+    - IEEE divide enlace em Controle de enlace lógico e controle de acesso ao meio 
+- Na camada física (camada 1 modelo OSI), trata-se os bits, transmissão de dados, e meios de transmissão. Lida com taxa de trsnferência, largura de bbanda e latência.
+- Na camada de enlace (camada 2 do modelo OSI) trata da interação da rede e do hardware, detecção e correção de erros de tranmissão, comunicação dos nós de redes (enlace)
+- PDU (Protocol Data Unit) é alterado conforme é processado pelo protocolo
+    - Na cama de enlace e física define-se o padrão ethernet (como os dados são transmitidos no padrão de comunicação através do cabo de rede)
+- Dependendo da camada, dispostivos diferentes operam. 
+
