@@ -253,7 +253,86 @@ Hacktivistas: Utilizam hacking para causas políticas ou sociais, muitas vezes a
             - Inspeção de estado: Inspeciona dados, procurando padrões baseados nas regras.
 
 **Conectividade:**
-- 
+- Transição do analógico para o digital
+    - Analógicos: mais simples, apenas entre dispostivos do mesmo tipo (radio analógico transmite apenas voz)
+    - Digital: mais complexo, dobro de capacidade, e transmite mais que apenas a voz. Melhor bateria, qualidade de transmissão, e segurança (criptografia)
 
+- O processo de comunicação digital envolve a conversão de informações analógicas em dados digitais por meio de amostragem e quantização, seguida pela modulação dos sinais digitais em uma forma de onda adequada para transmissão, codificação no canal para detecção e correção de erros durante a transmissão e, por fim, demodulação para recuperar os dados originais no receptor. 
 
+Transmissão de dados: transferência de bit de informação de um ponto a outro, seja local ou global.
+    - Tranmissão: de onde sai a informação;
+    - Receptor: onde chega a informação;
+    - Canal: meio de transmissão da informação;
+    - Protocolo: regra para que comunicação seja estabelecida;
+    - Código e contexto importam;
 
+- Tipos de transmissão:
+    - Serial: um bit de cada vez
+        - Síncrona: baseada no tempo de transmissão. Ao vivo, com equipamentos conectados ao mesmo tempo (programa ao vivo televisão)
+        - Assíncrona: baseada na velocidade de transmissão. Gravada, com equipamentos não necessariamente conectados (filme na televisão)
+    - Paralela: envia mais bits (mais rápido), onde é necessário mais cabos (mais cabos = maior interferência eletromagnética)
+
+- Conectividade: três tipos de modos de transmissão
+    - Simplex: fluxo único, relação emissor e receptor (unidireciona, ex: televisão)
+    - Half Duplex: fluxo duplo (multidirecional) não simultaneo;
+    - Full Duplex: o mais rápido. fluxo duplo e simultâneo
+
+- Comunicação ponto a ponto
+    - Duas antes que fazer a comunicação direta apenas entre sí (diferente da multiponto)
+        - Protocolo PPP (point point protocol), camada dois de enlace de dados. Autentificado via PAP e CHAP. PPPOE e PPPOA
+    - Verificador de erros:VRC, LRC, CRC e Checksum.
+
+- Portar lógicas: sistemas binários, analisa bits e retorna saída baseado na porta lógica
+    Portas: AND, OR e NOT; NAND e NOR; e XOR (entradas diferentes == true) e XNOR (entradas iguais == true)
+
+- Verificador de erros usa porta XOR por padrão
+    - VRC (Verificador de Redundância de Paridade):
+        - Adiciona-se um bit adicional para cada conjunto de dados enviado.
+            - Verificação Par: Adiciona-se 0 se o número de "1" no conjunto de dados for par.
+            - Verificação Ímpar: Adiciona-se 1 se o número de "1" no conjunto de dados for ímpar.
+
+    - LRC (Longitudinal Redundancy Check):
+        - Um único bit de paridade é adicionado aos dados.
+            - O bit de paridade é calculado com base na soma dos bits de dados.
+            - Exemplo: Para um conjunto de dados de 4 bits (1010), a soma dos bits de dados (1 + 0 + 1 + 0 = 2) determina o bit de paridade.
+            - Se a soma for par, o bit de paridade será 0; se for ímpar, será 1.
+
+    - CRC (Cyclic Redundancy Check):
+        - Dividida em etapas de envio, divisão e cálculo do valor final.
+            - Utiliza um polinômio gerador para calcular um valor de verificação de redundância cíclica.
+            - Altamente eficaz na detecção de erros em transmissões de dados.
+
+    - Checksum:
+        - Baseia-se na soma dos dados, considerada mais confiável.
+            - Lado Emissor: Gera o checksum através da soma dos dados em blocos.
+            - Receptor: Verifica os dados considerando o checksum, que é o valor final da soma da informação em blocos.
+
+**Par metálico**
+- Placa de rede (network interface card) recebe cabo de rede, fazendo conexão. Endereço de IP e MAC necessários. Possui velocidade variável e diversos tipos de conexão diferentes (PCI, PCI Express, USB, para aqueles sem placas de rede; e Thunderbold, para melhor velocidade da USB etc)
+    - Cabo coaxial: Usado em TV a cabo e em rede de relecomunicações. Voltado para video e audios. Cabo de cobre com isolante, para ser imune a interferências eletromagnéticas. Possui conectores específicos.  
+    - Cabo de par trançado: Cabo mais utilizado em redes de computadores (barato, flexível, fácil manutenção e maior taxa de transferência de arquivos), mas possui comprimento máximo de 100 metros e alta sensíbilidade a interferências.
+        - Cat 1: Redes telefonicas e redes antigas, não mais reconhecidas
+        - Cat 2: Redes telefonicas e redes antigas, não mais reconhecidas
+        - Cat 3: Específico para redes, até 16Hmhz
+        - Cat 4: Transmissão de dados a 20Mhz, não mais reconhecida
+        - Cat 5: Substitui categoria 4, qualquer placa de rede se conecta
+        - Cat 5e: Reconhecida pela TIA, suporta 125Mhz
+        - Cat 6: Alcance de 155m, com dados até 250Mhz
+        - Cat 6a: Até 100m, suporta 500MHz
+        - Cat 7: Ainda em desenvolvimento, visa 100Gbits em cabos de 15m
+
+**Fibra**
+- Alta largura de banda, utilizado no meio industrial e medicinal, mas com alto valor de instalação (reflexão total interna da luz). Segura e de longa distância. A manutenção preventiva inclui inspeção visual, limpeza, teste de qualidade e gestão de cabos. Já a manutenção da fibra óptica envolve preparação, alinhamento e fusão.
+- Possui núcleo e revestimento, diâmetro, índice de refração, flexibilidade e imunidade à interferência.
+    - Monomodo: apenas um modo (ou caminho) de luz viaja através do núcleo da fibra. feixes de luz se propagam em linha reta pelo centro da fibra, sem sofrer dispersão. Voltada para longas distâncias e alta velocidade, pois oferece baixa atenuação e baixa dispersão, permitindo que os sinais sejam transmitidos por maiores distâncias com menos perda de sinal. Geralmente é mais cara de implantar.
+    - Multimodo: Na fibra óptica multimodo, vários modos de luz viajam através do núcleo da fibra, refletindo-se internamente nas paredes do núcleo, resultado em uma dispersão modal e causando um alargamento no pulso óptico. A fibra multimodo é usada principalmente em distâncias curtas e redes locais devido à sua maior dispersão e atenuação em comparação com a fibra monomodo. Geralmente é mais econômica.
+
+Em resumo, a fibra óptica monomodo é usada para transmissões de longa distância e alta velocidade, enquanto a fibra multimodo é mais comum em distâncias curtas e redes locais. A escolha entre os dois tipos de fibra depende das necessidades específicas de uma aplicação, incluindo distância, largura de banda e custo.
+- Fusão de fibra: feita quando a fibra se rompe.
+
+**Redes sem fio**
+- Sem conexão física, normalmente utilizando ondas de radio. Mobilidade e facilidade de instalação
+    - Wi-fi: Utilizado em redes locais. Possui padrão de internet 802.11, com alto alcance, segurança e conexão de múltiplos dispositivos. 
+        - Padrão 802.11 define características, sendo o primeiro padrão lançado. Possue outras versões, como a 802.11a; 802.11b; 802.11g; 802.11n e 802.11ac.
+    - Bluetooth: Conectividade de curto alcance para dispostivios pessoaais. Utiliza sinais de rádio de curto alcance (2,4Ghz). Podem operar em diferentes canais de comunicação e possui curto alcance (100m, para versão 5.0 em condições ideias)
+    - 3g, 4g e 5g: Dispositivos moveis com alta velocidade de conexão, cada uma com características técnicas diferentes.
