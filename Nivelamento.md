@@ -357,3 +357,20 @@ Em resumo, a fibra óptica monomodo é usada para transmissões de longa distân
     - Na cama de enlace e física define-se o padrão ethernet (como os dados são transmitidos no padrão de comunicação através do cabo de rede)
 - Dependendo da camada, dispostivos diferentes operam. 
 
+
+**Endereço MAC e tráfego de Dados**
+- Endereço MAC (Media Access Control): identificador exclusivo, associado à interface de rede de um dispositivo. Funciona com um número de série de 48 bits e pode identificar um dispositivo de rede Ethernet ou Wi-fi. è uma sequência alfabunéria com formato específico (geralmente seis pares de caracteres hexadecimais; sendo três o identificador único do fabricante, e os outros três o número de série do dispositivo)
+- MAC Address é utilizado na camada de enlace no modelo OSI (camada 2) para encaminhar as informações 
+- Comunicação não funciona em rede se MAC Address for igual
+    - Comunicação Unicast (1 para 1), enlace associa endereço do  disposiivo de saída com endereço do dispositivo de chegada, e switch direciona.
+    - Comunicação  Broadcast (1 para todos), envia para todos, não especificando endereço do dispositivo  de chegada.
+
+Comunicação de ativos na camada 1 e 2 (hub e switch)
+- Camada 2 usa MAC Address, e camada um apenas bit
+    - Switch lê quadros  e seleciona redes (via MAC Address, enquanto hub não seleciona)
+    - Switch desencapsula, Lê, e se informação estiver, encaminha corretamente.
+
+**Protocolo ARP** (funcionamento baseado no modelo OSI)
+- ARP (Address Resolution Protocol) mapeia endereços IP para Endereços Mac em redes locais, conectando um ip em constante mudança a um endereço físico
+- Modelo OSI possui diversos tipos de endereço em diferentes tipos de camada
+- Dispositivo gera frame, e compara com todos dispositivos de destino, até algum deles responder a requisição, devolvendo seu MAC address
