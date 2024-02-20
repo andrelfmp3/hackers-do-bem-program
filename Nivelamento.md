@@ -374,3 +374,26 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
 - ARP (Address Resolution Protocol) mapeia endereços IP para Endereços Mac em redes locais, conectando um ip em constante mudança a um endereço físico
 - Modelo OSI possui diversos tipos de endereço em diferentes tipos de camada
 - Dispositivo gera frame, e compara com todos dispositivos de destino, até algum deles responder a requisição, devolvendo seu MAC address
+
+**Endereçamento IPV4**
+- Acesso a internet requer conexão física e lógica
+- IPV$ é composto por 4 octetos separados por pontos, onde cada octeto é composto por 8 bits e varia de 0 a 255 (256 em decimal fornece 9bits)
+- Número padronizado via IETF, IEE e IANA
+- Um endereço IP dinâmico é atribuído temporariamente a um dispositivo em uma rede e pode mudar ao longo do tempo, enquanto um endereço IP estático é fixo e permanente para um dispositivo específico.
+- Máscara de rede: determina como os bits em um endereço IP são dividios entre a identificação da rede e a identificação do host. Critérios do endereço IP seguem válidos
+- Endereço Ip + máscara de rede determinam em qual rede o dispositivo pertence
+- Divisão de endereçamentos: de A a E, sendo D e E reservados, sendo D reservados apenas para multicast.
+- Endereços de rede final 255 é usado para broadcast, e 0 é endereço de rede (varia conforme máscara começa / termina )
+- Ex: endereço /24, (três primeiros octetos ligados, )
+
+**IP público, privado, e NAT**
+- LAN: Endereço privado, IPs podem ser iguais, 3 ranges (inicio 10, 172, e 192)
+- WAN: Endereço público (provedor de internet), IPs exclusivos (pode esgotar)
+
+- NAT (Network Address Translation): converte/traduzi IPs
+
+**Sub-redes**
+- Isolar enderaçamento das redes sem segmentação física
+- Prática de subdividir rede em duas redes, ao invés de rede principal + uma rede dividida
+- 256 (2⁸) segmentado, vira duas redes de 128 (2⁷) (128 - 2 = 126)
+- Máscara determina onde começa e onde termina
