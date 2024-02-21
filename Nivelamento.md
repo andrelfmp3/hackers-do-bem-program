@@ -397,3 +397,14 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
 - Prática de subdividir rede em duas redes, ao invés de rede principal + uma rede dividida
 - 256 (2⁸) segmentado, vira duas redes de 128 (2⁷) (128 - 2 = 126)
 - Máscara determina onde começa e onde termina
+- Não é possível criar três sub-redes, apenas 4 (precisa ser múltiplo de 2, onde 2¹ é 2 redes, e 2² é 4 redes, ficando com 64 hosts em cada)
+
+**Super-redes**
+- Ao invés de dividir, aglomera e combina, tendo maior capacidade para mais dispositivos
+- Rede é limitada por 254 IPs válidos (e 2 inválidos), devido a 2⁸
+- Usasse 9 bits para ampliar (dobro de dispositivos), chegando a 522 hosts, usando bit de outro octeto. Ex: 255.255.254.0 
+    - Broadcast (ip final) se altera, devido a quantidade/limite de IPs válidos se alterar
+
+# Compreender IPV6 e camada de transporte
+- IPs são usados para rotear dados entre os dispositiovs
+
