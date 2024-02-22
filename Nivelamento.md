@@ -406,5 +406,27 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
     - Broadcast (ip final) se altera, devido a quantidade/limite de IPs válidos se alterar
 
 # Compreender IPV6 e camada de transporte
-- IPs são usados para rotear dados entre os dispositiovs
+- IPs são usados para rotear dados entre os dispositivos, permitindo que pacotes de informação encontrem seu caminho correto. Também usados para identificar a localização aproximada de um dispostivo na rede.
+- Fundamental que todas redes locais sejam identificadas numéricamente com o "endereço IP"
+- Para acesso a internet, necessita-se
+    - Acesso a rede mundial
+    - Endereço de rede (IP)
+- IPv6 vem substituido o IPv4 (versão mais comum)
+    - IPv4 é composta por quatro conjuntos de números decimais, variado de 255 (8bytes), esgotados em aproximadamente 2011
+    - IPv6 mais moderno, tendo suas técnicas básicas desenvolvidas na decada de 90 no IETF
+- IANA cordena endereçamento (entidade global), tanto IPs quantos sites que se traduzes para IPs, distribuindo blocos de endereço para regiões (registros regionais de internet, o Brasil, LACNIC)
+- Para acesso a internet, o provedor disponibiliza um IP público (estão acabando, IPs privados são repetiçãos dos IPs públicos)
+- IPv6 suporta 128bits, conectando múltiplos aparelhos simultaneamente. Além disso, possui expansão das capacidades de dereçamento, autentificação e privacidade, autoconfiguração, e simplificação do cabeçalho
+- Composto por 8 hexadecatetos, com 16 bits cada hexadecateto (4 algarismos tem 16 bits)
+
+Cabeçalho IPv6
+- Cabeçalho IP é uma informação apresentada no início de um pacote de protocolo de internet.
+- Comunicação em modelos de camada (OSI) 
+- Cabeçalho = bits, dados com binários (aumentos do quem tem que ser transmitido)
+- Em cada salto na rede os cabeçalhos são acrescentados e retirados
+    - Salto: Cada vez que um pacote é encaminhado de um roteador para outro
+- Cabeçalho IPv6 tem 8 campos fixos, 40 Bytes de tamanho 
+- Possui versão do protocolo
+- Mais simples, mais flexível e mais eficiente
+
 
