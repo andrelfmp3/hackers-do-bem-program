@@ -482,6 +482,17 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
 - Não realiza controle de fluxo (não tenta ajustar a taxa de transferência com base na capacidade da rede) 
 - O UDP é um protocolo de transporte rápido e eficiente, adequado para aplicativos em que a velocidade e a baixa latência são mais importantes do que a garantia absoluta de entrega de dados. 
 
+# Compreender camada de aplicação / serviços de rede
+
+**Email**
+- Serviço da camada de aplicação pupular, projeto que iniciou modelo OSI e internet (projeto ARPANET)
+- Serviço de hospedagem de emails (email -> provedor -> servidor -> destinatário)
+- Suporta protocolos via SMTP (envia email), POP3 e IMAP (recebe emai)
+    - SMTP: Simple Mail Transfer Protocol, exige cabeçalho, utiliza-se porta 25. Armazena mensagens a ser enviadas, em fila, se não for entregue, a mensagem é devolvida ao remetente.
+    - POP3: envia do servidor para cliente, e exclui. Usa-se porta 995 (antes 110, mas 995 possui criptografia), solita conexão TCP com servidor.
+    - IMAP: envia do servidor para cliente, e se mantem até serem excluidas manualmente. Ideal para backup. Hierarquia de arquivos possível. Permite acesso de diferentes dispositivos
+    (incompletoSS)
+
 
 
 
