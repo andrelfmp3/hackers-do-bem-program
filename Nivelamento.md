@@ -419,7 +419,7 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
 - IPv6 suporta 128bits, conectando múltiplos aparelhos simultaneamente. Além disso, possui expansão das capacidades de dereçamento, autentificação e privacidade, autoconfiguração, e simplificação do cabeçalho
 - Composto por 8 hexadecatetos, com 16 bits cada hexadecateto (4 algarismos tem 16 bits)
 
-Cabeçalho IPv6
+**Cabeçalho IPv6**
 - Cabeçalho IP é uma informação apresentada no início de um pacote de protocolo de internet.
 - Comunicação em modelos de camada (OSI) 
 - Cabeçalho = bits, dados com binários (aumentos do quem tem que ser transmitido)
@@ -428,5 +428,69 @@ Cabeçalho IPv6
 - Cabeçalho IPv6 tem 8 campos fixos, 40 Bytes de tamanho 
 - Possui versão do protocolo
 - Mais simples, mais flexível e mais eficiente
+
+**Tipos de endereço**
+- Métodos de comunicação entre IPv4 e IPv6: unicast; anycast; broadcast e multicast
+    - Unicast: um para um, é um enderaçmento para um pacote feito a um único destino, sem interação com otro dispositivo
+    - Anycast: Feita de uma interface para muitas outras (**na mesma região**). Cada dispositivo anuncia o mesmo endereço de rede.
+    - Multicast: Dispositivo se comunica com alguns receptores, é o método de transmissão de pacote de dados para múltiplos utilizado pelo IPv6
+    - Broadcast: Método de transmissão simultanea para diversos receptores, usado especificamente no IPv4, transmissão criteriosa
+- Tipos de endereços em IPv6:
+    - link local: 1 para 1, endereço configurado automaticamente 
+
+    - global unicast address: exclusivo, similar ao IPv4 público
+    - multicast: roteador manda informação para grupo de roteadores
+    - loopback: abre o próprio ip, próprio emdereço (ping == autoteste)
+
+    IPv6 na prática
+    - Cabos de energia (geralmente pretos), de rede (geralmente vermelhos), e de console (geralmente azul) 
+        - link local IPv6 é atribuido dinamicamente e configurado manualmente (cada ponta)
+
+**Abreviações do endereço IPv6**
+- Visando ter mais possibilidades, IPv6 complica gerencialmento por ser um número muito grande, abreviação é necessário
+    - Grande quantidade de zeros pode ser omitidas por ::
+        - Some ou "de um lado" ou "de outro"
+    -0099 vira 99 (corta-se zeros)
+
+**Sub-redes IPv6** 
+- prefixo /64 identifica (comprimento do prefixo da sub-rede), onde os primeiros 64bits são para rede, e o resto para hosts (64 é apenas exemplo)
+- Segmenta-se ultimo hexadecadeto dos dedicados para rede (no exemplo de /64, o quarto grupo de 16 bits)
+- Para quebrar o /64 em dois /65.
+    - Usa-se um caractere "emprestado" da parte de host (64 bits + 1 bit emprestado), e divide-se o /65 em 2 (/64 dividida foge dos padrões)
+        - Divide-se de 0000 até 7fff, e de 8000 até ffff
+- Com um bit emprestado, as redes pulam de 8 em 8; com dois bits, pula de 4 em 4; e o padrão se mantem
+
+**Camada de transporte**
+- Responsável pela transferência de dados entre máquinas, independentemente da configuração de rede utilizada
+- Firewall barra camada de transporte, via portas
+- Segmenta dados das camadas superiores
+- Mentem e monitora várias comunicações entre aplicações
+- Serviços usam porta padrão (ftp, ssh, telnet, smtp, dns, tftp, https, snmt)
+
+**Protocolo TDP**
+- Transport Control Protocol
+- Confirma e retransmite dados, garantindo que a informação de um dispositivo chegue no outro dispostivo
+- Depende do IP para se comunicar. TCP é usado quando se necessita de confiabilidade.
+- Remonta segmentos no destino na ordem correta
+- Estabelecimento de conexão em 3 vias (pergunta, recebe, envia)
+- Faz controle de fluxo para não sobrecarregar o sistema (janelamento)
+    - Capacidade do TCP de controlar o fluxo de dados entre remetente e receptor.
+
+**Protocolo UDP**
+- User Datagram Protocol
+- O protocolo UDP foi projetado para facilitar e fornecer comunicação rápida entre dispositivos em redes IP.
+- Não realiza controle de fluxo (não tenta ajustar a taxa de transferência com base na capacidade da rede) 
+- O UDP é um protocolo de transporte rápido e eficiente, adequado para aplicativos em que a velocidade e a baixa latência são mais importantes do que a garantia absoluta de entrega de dados. 
+
+
+
+
+
+
+
+
+
+
+
 
 
