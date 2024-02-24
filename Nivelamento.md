@@ -491,10 +491,20 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
     - SMTP: Simple Mail Transfer Protocol, exige cabeçalho, utiliza-se porta 25. Armazena mensagens a ser enviadas, em fila, se não for entregue, a mensagem é devolvida ao remetente.
     - POP3: envia do servidor para cliente, e exclui. Usa-se porta 995 (antes 110, mas 995 possui criptografia), solita conexão TCP com servidor.
     - IMAP: envia do servidor para cliente, e se mantem até serem excluidas manualmente. Ideal para backup. Hierarquia de arquivos possível. Permite acesso de diferentes dispositivos
-    (incompletoSS)
 
-
-
+    **Web**
+- HTML, WWW e HTTP
+- Navegador, na camada de aplicação visando usa comum, URL estabelece conexão com servidor web, que está em execução em um servidor que utiliza o protocolo HTTP
+    - Navegador interprete o protocolo (HTTP), o nome do servidor (www.exemplo.com), e depois o nome do arquivo solicitado (index.html)
+        - DNS mapeia o nome de domínio para endereços IP
+    - Navegador verifica no servidor de nomes, para converter o nome do servidor para um IP válido
+    - Em resposta, servidor envia o código HTML
+    - NAvegador decifra o HTML e formata a página
+- HTTP é um protocolo de requisição e resposta (específica mensagens usadas na convesação), podendo utilizar get, post e put
+    - GET: solicita dados feitos pelo cliente
+    - POST: carrega arquivod de dados de um servidor web (dados)
+    - PUT: carrega recursos ou conteúdos (imagens, videos)
+- HTTPS = HTTP + security, com fluxo de dados criptografado com SSL, utilizando portas 443 ou 8448, ao invés de 80 ou 8080. HTTP é menos seguro, mas mais flexível
 
 
 
