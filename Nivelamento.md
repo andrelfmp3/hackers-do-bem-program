@@ -507,4 +507,94 @@ Comunicação de ativos na camada 1 e 2 (hub e switch)
 - HTTPS = HTTP + security, com fluxo de dados criptografado com SSL, utilizando portas 443 ou 8448, ao invés de 80 ou 8080. HTTP é menos seguro, mas mais flexível
 
 **DNS**
-- 
+- Domain Name System, visava facilitar a escalabilidade da internet, onde popularizou e facilitou o acesso a mesma
+- Criado por Paul Mockapetris, mesmo criador da arpanet, em 1983
+- Replica e distibui tabelas, sendo um sistema de dristribuição de informações (IP, Domínio). "Lista telefónica da internet"
+- **Converte os nomes de domínio em endereços IP**, assim, humanos não necessitam memorizar IPs
+- Existem 4 servidores DNS envolvidos no carregamento de uma página de internet
+    - Recursor de DNS: projetado para receber consultas de máquinas de clientes, e faz consultas adicionais para as atender
+        - Servidor Raiz: primeira etapa da tradução, seleciona "categoria geral"
+        - Nameserver TLD: próximo passo e categoria menos geral, hospeda final do hostname, ".com" 
+        - Servidor de DNS autoritativo: nome específico traduzido em sua defininição, sendo a última etapa, retornando o resultado para o recursor DNS
+
+**Cache**
+- Armazenamento temporário de dados, visando aumento de desempenho, redução de consumo de largura de banda e confiabilidade. Podendo ser utilizado para otimizar o DNS.
+
+**DHCP**
+- Dynamic Host Configuration Protocol
+- Evolução do protocolo BOOTP, desenvolvido pela IETF
+- Vinculava IP e MAC Adress em nível pequeno, DHCP opera em nivel maior
+- Protocolo do tipo cliente/servidor, que permite que os hosts obtenham as informacões TCP/IP, eliminando a necessidade da atribuição manual (IPv4)
+- Envia "discover" para toda rede, esperando resposta com mensagem de oferta de DHCP, oferenco locação IP para cliente que requisita.
+- UDP (User Datagram Protocol) é utilizado para comunicação entre clientes e servidores DHCP
+
+**Acesso Remoto**
+- Anos 80, via PCAnywhere
+- Visualiza desktop, arquivos e funcionalidades
+- Diferentes aplicativos usam aplicações distintas, se atualizando
+    - Nem todo acesso remoto é feito via internet
+- Segurança depende do software que é utilizado (hardware, software e rede)
+
+- Conexão de área de trabalho remota: (protocolo RDP conecta o TS (remote desktop protocol conecta o microsoft terminar services)), funciona em sistemas não windows, geralmente na porta 3389, não criptografada, e permite multiplas conexões (dado a licença disponível)
+- VPN: conexão via tunelamento e criptografia, sendo mais segura, por conectar diferentes redes e não diferentes dispositivos. Diferentes ferramentas para executar acesso remoto
+    - Ferramentas: telnet e SSH
+        - Telnet: teletype netword, protocolo de rede, sendo um protocolo básico, proporcionando facilidade de comunicação visa terminal virtual, com transferência de dados não codificada
+        - SSH: Secure Socket Shell, possui ênfase em segurança via criptografia de chaves assiméticas, com respostas a ataques já conhecidos. Utiliza porta 22.
+- Exemplo de programa de acesso remoto: AnyDesk, TeamViewer, Real VNC
+
+**Transferência de Arquivos**
+- Servidor é computador de alto poder computacional
+- LAN ou WAN. São escaláveis. Possui arquitetura cliente/servidor
+- Servidor NAS é unidade de armazenamento excluisiva para arquivos, via rede local. Organizam, centralizam e fazer backup de dados. Virtualizavel e funciona como servidor de nuvem. Possuem OS embarcado e não precisa de computador host, suportam diversos tipos de aplicações e possuem sistema de segurança (replica dados, grava arquivoes em mais de um destino)
+
+SMB: server message block, permite comunicação remota para compartilhar recursos. É um protocolo de compartilhamento de arquivos em rede, sendo utilizado em conjunto com o protocolo TCP/IP. É um protocolo servidor/cliente, onde utiliza porta 445 (antigamente utilizava a 139). Exeige nome de usuário e senha para permitir acesso ao servidor. Difersas variantes (CIFS e SMBversions)
+
+**Torrent**
+- Extensão de arquivo, compatível apenas com BitTorrent, sendo responsável por grande parte do tráfego na net. Protocolo P2P é descentralizado, sem servidor central (ponto a ponto)
+- Seed é o usuário de compartilha arquivo, e pee é o usuário que baixa ao arquivo.
+- Protocolo FTP (File Transfer Protocol), utiliza canais individual para comunicar dados do tipo cliente/servidor, sendo tanto servidores públicos quanto privados. Utiliza porta 21
+    - FTP tradicional precisa credenciais, diferente do FTP anônimo. Canal de comando e canal de dados, tendo modo ativo e passivo.
+
+**Controle de usuário**
+- Serviços de diretório para organizar e controlar acesso dos usuários
+    - LDAP protocol: protocolo para organizar dados de forma hierárquica, sendo uma versão mais leve do DAP, tendo uso comum para oferecer centralização de usuários de uma rede. Serve como um local central parar armazenar informações de auntetificação, como nomes de usuário, privilégios, e senhas.
+    - Hierarquia em árvore, com diretório raiz, países, organizações, unidades organizacionais e indivíduos.
+- Microsoft Active Directory é serviço de diretório para gerenciamento, contendo informações sobre cada conta. o LDAP pode armazenar e extrair objetos, como nomes de usuário e senhas no Active Directory
+- RADIUS Remote Authentication Dial in User Servies, protocolo de redes de autentificação de servidores e acesso, com gerenciamento centrallizado de AAA (autentifica, autoriza e contabiliza (accounting)). Protocoolo tipo cliente/servidor, tendo UDP como base. 
+- Suporta vários métodos de autentificação, normalmente consistindo em consulta do NAs ao servidor RADIUS e resposta do servidor. Utiliza porta 1812, e não mais a 1645
+
+- SNMP: Simple Network Management Protocol, colete organiza e envia dados de elementos de uma rede IP, atualmente, está na versão 3, por ser mais segura. Usado para monitoramento de desempenho, detecção e resolução de problemas, configuração de dispositivos, e notificação de eventos.
+- NTP: Network Time Protocol, padrão que sincroniza relógios, via sensibilidade de softwares e aplicações ao sincronismo de relógios. Utilizado para obter informações de tempo em um determinado servidor, disciplinar o relógio local, escolher sentre vários servidores qual oferece o tempo correto, e topologia simples e confiável.
+    - Formam uma topologia hieráriquiva dividia em camadas/estratos, possuindo diferentes tipos de associações. Pode ser cliente/servidor, modo simétrico, ou ser broadcast e multicast
+- SYSLOG: System Logging Protocol, tendo como objetivo armazenar mensagens de eventos no sistema. Utilizado para monitoramento, solução de problemas, segurança, conformidade e análise e planejamento.
+    - Separado em geração de eventos, envio para o servidor SYSLOG (SYSLOG server/collector), formata a mensagem, armazena, e analísa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
